@@ -1,3 +1,23 @@
+function game() {
+  const totalRrounds = 5;
+  const score = {
+    player: 0,
+    computer: 0,
+  };
+
+  for (let round = 1; round <= totalRrounds; round += 1) {
+    const playerSelection = playerMove();
+    const roundResults = singleRound(playerSelection);
+
+    updateScore(score, roundResults);
+    showRoundInfo(round, score, roundResults);
+    if (isDraw(roundResults)) {
+      round -= 1;
+    }
+  }
+  theWinnerIs(score);
+}
+
 function getComputerChoice() {
   switch (Math.floor(Math.random() * (3 - 1 + 1) + 1)) {
     case 1:
@@ -78,20 +98,6 @@ function singleRound(playerSelection, computerSelection = getComputerChoice()) {
   }
 }
 
-function game() {
-  const totalRrounds = 5;
-  const score = {
-    player: 0,
-    computer: 0,
-  };
-  const playerSelection = playerMove();
-  console.log(playerSelection);
-
-  for (let round = 1; round <= totalRrounds; round += 1) {
-    const roundResults = singleRound(playerSelection);
-  }
-}
-
 function playerMove() {
   const playerSelection = prompt("What's your chose?").toLowerCase();
   if (
@@ -103,3 +109,37 @@ function playerMove() {
   }
   return playerMove();
 }
+
+function isDraw(roundResults) {
+  if (roundResults.playerScore === 0 && roundResults.computerScore === 0) {
+    return true;
+  }
+  return false;
+}
+
+function updateScore(score, roundResults) {
+  score.player += roundResults.playerScore;
+  score.computer += roundResults.computerScore;
+
+  return score;
+}
+
+function showRoundInfo(round, score, roundResults) {
+  console.log(`Round #: ${round}`);
+  console.log(roundResults.roundResult);
+  console.log(`Your Score: ${score.player}`);
+  console.log(`Computer Score: ${score.computer}`);
+  console.log("-------------------------------------");
+}
+
+function theWinnerIs(score) {
+  console.log("=====================================");
+  if (score.player === score.computer) {
+    return console.log("Draw!");
+  } else if (score.player > score.computer) {
+    return console.log("Congrats! You won the game!");
+  }
+  return console.log("You lost! Computer won! Ha-ha!!");
+}
+
+game();
