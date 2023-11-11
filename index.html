@@ -3,9 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ivan Antonenko" />
+    <script src="./js/index.js" defer></script>
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <script src="./js/index.js"></script>
+    <div class="wrapper">
+      <div class="container">
+        <header class="header">
+          <h1 class="header__title">Rock-Paper-Scissors</h1>
+        </header>
+      </div>
+      <main class="main">
+        <div class="container">
+          <div class="rules">
+            <div class="rules__description">
+              <p class="rules__text">
+                In rock-paper-scissors, two players will each randomly choose
+                one of three hand signs: rock (made by making a fist), paper
+                (made by laying your hand flat), or scissors (made by holding
+                out two fingers to look like scissors). Both players show their
+                signs at the same time to see who will win. Here are the rules
+                that determine which sign beats another:
+              </p>
+              <ul class="rules__list">
+                <li class="rules__item">
+                  <p class="rules__text">
+                    Rock wins over scissors (because rock smashes scissors);
+                  </p>
+                </li>
+                <li class="rules__item">
+                  <p class="rules__text">
+                    Scissors wins over paper (because scissors cut paper);
+                  </p>
+                </li>
+                <li class="rules__item">
+                  <p class="rules__text">
+                    Paper wins over rock (because paper covers rock).
+                  </p>
+                </li>
+              </ul>
+              <p class="rules__text">
+                If both players show the same sign, it’s a tie.
+              </p>
+            </div>
+          </div>
+          <div class="game">
+            <h2 class="game__title">5 rounds tot</h2>
+            <ul class="game__scores-list">
+              <li class="game__scores-item">
+                <span class="game__scores-player-name">Player:</span>
+                <span class="game__scores-player-score" id="player-score"
+                  >0</span
+                >
+              </li>
+              <li class="game__scores-item">
+                <span class="game__scores-player-name">Computer:</span>
+                <span class="game__scores-player-score" id="computer-score"
+                  >0</span
+                >
+              </li>
+            </ul>
+            <ul class="game__choice-list">
+              <li class="game__choice-item"><p>?</p></li>
+              <li class="game__choice-item"><p>?</p></li>
+            </ul>
+            <ul class="game__buttons-list">
+              <li class="game__buttons-list-item">
+                <button class="game__buttons-list-button" id="rock">
+                  rock
+                </button>
+              </li>
+              <li class="game__buttons-list-item">
+                <button class="game__buttons-list-button" id="paper">
+                  paper
+                </button>
+              </li>
+              <li class="game__buttons-list-item">
+                <button class="game__buttons-list-button" id="scissors">
+                  scissors
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Copyright © 2023</span>
+      </footer>
+    </div>
   </body>
 </html>

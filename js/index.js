@@ -141,5 +141,3 @@ function theWinnerIs(score) {
   }
   return console.log("You lost! Computer won! Ha-ha!!");
 }
-
-game();
