@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Ivan Antonenko" />
-    <script src="./js/index.js" defer></script>
+    <link
+      type="image/png"
+      sizes="32x32"
+      rel="icon"
+      href="./img/fist_2121094.ico"
+    />
+    <script src="./js/index.js" type="module" defer></script>
     <title>Rock Paper Scissors</title>
   </head>
   <body>
@@ -17,6 +23,9 @@
       <main class="main">
         <div class="container">
           <div class="rules">
+            <svg class="rules__icon">
+              <use href="./img/icons.svg#icon-info"></use>
+            </svg>
             <div class="rules__description">
               <p class="rules__text">
                 In rock-paper-scissors, two players will each randomly choose
@@ -49,7 +58,9 @@
             </div>
           </div>
           <div class="game">
-            <h2 class="game__title">5 rounds tot</h2>
+            <h2 class="game__title">
+              The winner of the game is the player who reaches 5 points.
+            </h2>
             <ul class="game__scores-list">
               <li class="game__scores-item">
                 <span class="game__scores-player-name">Player:</span>
@@ -65,23 +76,37 @@
               </li>
             </ul>
             <ul class="game__choice-list">
-              <li class="game__choice-item"><p>?</p></li>
-              <li class="game__choice-item"><p>?</p></li>
+              <li class="game__choice-item">
+                <svg class="game__choice-icon">
+                  <use href="./img/icons.svg#icon-unknown-filled"></use>
+                </svg>
+              </li>
+              <li class="game__choice-icon">
+                <svg class="rules__icon">
+                  <use href="./img/icons.svg#icon-unknown-filled"></use>
+                </svg>
+              </li>
             </ul>
             <ul class="game__buttons-list">
               <li class="game__buttons-list-item">
                 <button class="game__buttons-list-button" id="rock">
-                  rock
+                  <svg class="game__buttons-icon">
+                    <use href="./img/icons.svg#icon-hand-rock-solid"></use>
+                  </svg>
                 </button>
               </li>
               <li class="game__buttons-list-item">
                 <button class="game__buttons-list-button" id="paper">
-                  paper
+                  <svg class="game__buttons-icon">
+                    <use href="./img/icons.svg#icon-hand-paper-solid"></use>
+                  </svg>
                 </button>
               </li>
               <li class="game__buttons-list-item">
                 <button class="game__buttons-list-button" id="scissors">
-                  scissors
+                  <svg class="game__buttons-icon">
+                    <use href="./img/icons.svg#icon-hand-scissors-solid"></use>
+                  </svg>
                 </button>
               </li>
             </ul>
@@ -89,7 +114,13 @@
         </div>
       </main>
       <footer class="footer">
-        <span>Copyright © 2023</span>
+        <span class="footer__copyright">Copyright © 2023</span>
+        <a href="https://github.com/ivan-antonenko" class="footer__link">
+          <span class="footer__link-text">Ivan Antonenko</span>
+          <svg class="footer__link-icon">
+            <use href="./img/icons.svg#icon-github-logo"></use>
+          </svg>
+        </a>
       </footer>
     </div>
   </body>
