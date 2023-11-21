@@ -1,0 +1,264 @@
+/*Null-Style*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+/* Created styles */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  min-width: 314px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  background-color: #739072;
+  padding: 25px 0;
+}
+.header__title {
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  color: #3a4d39;
+  letter-spacing: 3px;
+}
+
+.main {
+  background-image: linear-gradient(192.53deg, rgba(237, 228, 207, 0.829) 9.671%, rgba(237, 228, 207, 0.829) 84.194%), url(../img/background-stripes.jpg);
+  background-size: auto;
+  background-position: -195px -265px;
+}
+
+.game {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 70px;
+  margin-bottom: 150px;
+}
+.game__title {
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.game__scores-list {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 300px;
+       column-gap: 300px;
+  margin-top: 60px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.game__choice-list {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 200px;
+       column-gap: 200px;
+  margin-top: 35px;
+}
+
+.game__choice-icon {
+  width: 200px;
+  height: 200px;
+}
+
+.game__buttons-list {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  margin-top: 40px;
+}
+.game__buttons-list-button {
+  border: 3px solid #3a4d39;
+  border-radius: 30px;
+}
+
+.game__buttons-icon {
+  width: 180px;
+  height: 180px;
+}
+
+.rules {
+  position: absolute;
+  right: 6px;
+  display: inline-block;
+  margin-top: 30px;
+  border-radius: 50%;
+  z-index: 999;
+}
+.rules__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.rules__button:hover > .rules__icon, .rules__button:focus > .rules__icon {
+  opacity: 0.7;
+}
+.rules__button:hover + .rules__description, .rules__button:focus + .rules__description {
+  right: 10px;
+  padding: 20px;
+  opacity: 1;
+  width: 600px;
+  transform: scaleX(1) scaleY(1);
+}
+.rules__icon {
+  fill: #4f6f52;
+  width: 54px;
+  height: 54px;
+  border-radius: 90%;
+  opacity: 1;
+  transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.rules__description {
+  position: absolute;
+  right: 10px;
+  width: 600px;
+  opacity: 0;
+  background-color: #739072;
+  border-radius: 20px;
+  transform: scaleX(0) scaleY(0);
+  transform-origin: top right;
+  transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.rules__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+.rules__text-icon {
+  fill: #ece3ce;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.rules__text--accented {
+  display: inline-block;
+  color: #ece3ce;
+  font-weight: 700;
+}
+.rules__list {
+  margin: 20px 0;
+}
+.rules__item {
+  display: flex;
+  align-items: center;
+}/*# sourceMappingURL=index.css.map */

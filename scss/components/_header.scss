@@ -1,0 +1,11 @@
+.header {
+    background-color: $section-accent-tone;
+    padding: 25px 0;
+    &__title {
+        font-size: 40px;
+        font-weight: 900;
+        text-align: center;
+        color: $main-title-tone;
+        letter-spacing: 3px;
+    }
+}

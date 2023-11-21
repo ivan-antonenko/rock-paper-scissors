@@ -10,45 +10,89 @@
       rel="icon"
       href="./img/fist_2121094.ico"
     />
+    <link rel="stylesheet" href="./scss/index.css" />
     <script src="./js/index.js" type="module" defer></script>
     <title>Rock Paper Scissors</title>
   </head>
   <body>
     <div class="wrapper">
-      <div class="container">
-        <header class="header">
+      <header class="header">
+        <div class="container">
           <h1 class="header__title">Rock-Paper-Scissors</h1>
-        </header>
-      </div>
+        </div>
+      </header>
+
       <main class="main">
         <div class="container">
           <div class="rules">
-            <svg class="rules__icon">
-              <use href="./img/icons.svg#icon-info"></use>
-            </svg>
+            <button class="rules__button">
+              <svg class="rules__icon">
+                <use href="./img/icons.svg#icon-info"></use>
+              </svg>
+            </button>
             <div class="rules__description">
               <p class="rules__text">
                 In rock-paper-scissors, two players will each randomly choose
-                one of three hand signs: rock (made by making a fist), paper
-                (made by laying your hand flat), or scissors (made by holding
-                out two fingers to look like scissors). Both players show their
-                signs at the same time to see who will win. Here are the rules
-                that determine which sign beats another:
+                one of three hand signs:
               </p>
               <ul class="rules__list">
                 <li class="rules__item">
+                  <svg class="rules__text-icon">
+                    <use href="./img/icons.svg#icon-hand-rock-solid"></use>
+                  </svg>
                   <p class="rules__text">
-                    Rock wins over scissors (because rock smashes scissors);
+                    <span class="rules__text--accented">rock</span> (made by
+                    making a fist),
+                  </p>
+                </li>
+                <li class="rules__item">
+                  <svg class="rules__text-icon">
+                    <use href="./img/icons.svg#icon-hand-paper-solid"></use>
+                  </svg>
+                  <p class="rules__text">
+                    <span class="rules__text--accented">paper</span> (made by
+                    laying your hand flat),
+                  </p>
+                </li>
+                <li class="rules__item">
+                  <svg class="rules__text-icon">
+                    <use href="./img/icons.svg#icon-hand-scissors-solid"></use>
+                  </svg>
+                  <p class="rules__text">
+                    <span class="rules__text--accented"> scissors</span> (made
+                    by holding out two fingers to look like scissors).
+                  </p>
+                </li>
+              </ul>
+
+              <p class="rules__text">
+                Both players show their signs at the same time to see who will
+                win. Here are the rules that determine which sign beats another:
+              </p>
+
+              <ul class="rules__list">
+                <li class="rules__item">
+                  <p class="rules__text">
+                    <span class="rules__text--accented">
+                      Rock wins over scissors</span
+                    >
+                    (because rock smashes scissors);
                   </p>
                 </li>
                 <li class="rules__item">
                   <p class="rules__text">
-                    Scissors wins over paper (because scissors cut paper);
+                    <span class="rules__text--accented">
+                      Scissors wins over paper</span
+                    >
+                    (because scissors cut paper);
                   </p>
                 </li>
                 <li class="rules__item">
                   <p class="rules__text">
-                    Paper wins over rock (because paper covers rock).
+                    <span class="rules__text--accented">
+                      Paper wins over rock</span
+                    >
+                    (because paper covers rock).
                   </p>
                 </li>
               </ul>
@@ -82,7 +126,7 @@
                 </svg>
               </li>
               <li class="game__choice-icon">
-                <svg class="rules__icon">
+                <svg class="game__choice-icon">
                   <use href="./img/icons.svg#icon-unknown-filled"></use>
                 </svg>
               </li>
@@ -114,13 +158,19 @@
         </div>
       </main>
       <footer class="footer">
-        <span class="footer__copyright">Copyright © 2023</span>
-        <a href="https://github.com/ivan-antonenko" class="footer__link">
-          <span class="footer__link-text">Ivan Antonenko</span>
-          <svg class="footer__link-icon">
-            <use href="./img/icons.svg#icon-github-logo"></use>
-          </svg>
-        </a>
+        <div class="container">
+          <span class="footer__copyright">Copyright © 2023</span>
+          <a
+            href="https://github.com/ivan-antonenko"
+            class="footer__link"
+            target="_blank"
+          >
+            <span class="footer__link-text">Ivan Antonenko</span>
+            <svg class="footer__link-icon">
+              <use href="./img/icons.svg#icon-github-logo"></use>
+            </svg>
+          </a>
+        </div>
       </footer>
     </div>
   </body>
