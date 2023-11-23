@@ -121,16 +121,18 @@
             </ul>
             <ul class="game__choice-list">
               <li class="game__choice-item">
-                <svg class="game__choice-icon">
+                <svg class="game__choice-icon" id="player-choice">
                   <use href="./img/icons.svg#icon-unknown-filled"></use>
                 </svg>
               </li>
-              <li class="game__choice-icon">
-                <svg class="game__choice-icon">
+
+              <li class="game__choice-item">
+                <svg class="game__choice-icon" id="computer-choice">
                   <use href="./img/icons.svg#icon-unknown-filled"></use>
                 </svg>
               </li>
             </ul>
+            <h2 class="game__winner-title hidden"></h2>
             <ul class="game__buttons-list">
               <li class="game__buttons-list-item">
                 <button class="game__buttons-list-button" id="rock">
@@ -154,22 +156,27 @@
                 </button>
               </li>
             </ul>
+            <button class="game__restart-button hidden">
+              restart the game
+            </button>
           </div>
         </div>
       </main>
       <footer class="footer">
         <div class="container">
-          <span class="footer__copyright">Copyright © 2023</span>
-          <a
-            href="https://github.com/ivan-antonenko"
-            class="footer__link"
-            target="_blank"
-          >
-            <span class="footer__link-text">Ivan Antonenko</span>
-            <svg class="footer__link-icon">
-              <use href="./img/icons.svg#icon-github-logo"></use>
-            </svg>
-          </a>
+          <div class="footer__wrap">
+            <span class="footer__copyright">Copyright© 2023</span>
+            <a
+              href="https://github.com/ivan-antonenko"
+              class="footer__link"
+              target="_blank"
+            >
+              <span class="footer__link-text">Ivan Antonenko</span>
+              <svg class="footer__link-icon">
+                <use href="./img/icons.svg#icon-github-logo"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </footer>
     </div>

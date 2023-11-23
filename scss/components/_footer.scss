@@ -1,0 +1,38 @@
+.footer {
+    padding: 25px 0;
+    background-color: $section-accent-tone;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: $main-title-tone;
+
+    &__wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 15px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+        color: $main-title-tone;
+        transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover {
+            color: $bg-color;
+        }
+        &:hover > .footer__link-icon {
+            transform: rotate(360deg);
+            fill: $bg-color;
+        }
+
+        &-icon {
+            width: 30px;
+            height: 30px;
+            fill: $main-title-tone;
+            transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    }
+}
