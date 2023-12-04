@@ -5,6 +5,7 @@ const refs = {
   playerChoice: document.querySelector("#player-choice"),
   computerChoice: document.querySelector("#computer-choice"),
   gameButtons: document.querySelector(".game__buttons-list"),
+  playButtons: document.querySelectorAll(".game__buttons-list-button"),
   winnerTitle: document.querySelector(".game__winner-title"),
   restartButton: document.querySelector(".game__restart-button"),
 };
@@ -28,6 +29,10 @@ function onPlayButtonClick(e) {
   const roundResults = singleRound(userData.choice);
   updateScore(scores, roundResults);
   displayRoundResults(refs, scores, roundResults, userData);
+
+  if (scores.player === 5 || scores.computer === 5) {
+    endTheGame(refs, scores);
+  }
 }
 
 function getComputerChoice() {
@@ -136,4 +141,15 @@ function highlightWinner(roundResults) {
   if (roundResults.computerScore) {
     refs.computerChoice.classList.add("winner");
   }
+}
+
+function endTheGame(refs, scores) {
+  refs.playButtons.forEach((element) => {
+    element.setAttribute("disabled", "disabled");
+    element.style.backgroundColor = "gray";
+  });
+
+  setTimeout(() => {
+    refs.gameTitle.textContent = "Game Over!";
+  }, 1500);
 }
