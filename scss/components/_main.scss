@@ -47,6 +47,11 @@
     margin-top: 60px;
     font-size: 20px;
     font-weight: 700;
+
+    .game__scores-player-score {
+        display: inline-block;
+        width: 20px;
+    }
 }
 
 .game__choice-list {
@@ -58,6 +63,11 @@
 .game__choice-icon {
     width: 250px;
     height: 250px;
+    border-radius: 20px;
+}
+.winner {
+    outline: 4px solid $filler;
+    background-color: rgba(0, 128, 0, 0.108);
 }
 
 .game__buttons-list {
@@ -70,12 +80,10 @@
         border-radius: 30px;
         transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-        &:hover,
-        &:focus {
+        &:hover {
             box-shadow: 2px 2px 10px -2px rgba(66, 68, 90, 1);
         }
-        &:hover > .game__buttons-icon,
-        &:focus > .game__buttons-icon {
+        &:hover > .game__buttons-icon {
             fill: $bg-color;
         }
     }
@@ -85,6 +93,7 @@
     height: 130px;
     fill: #000;
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
 }
 .rules {
     position: absolute;
