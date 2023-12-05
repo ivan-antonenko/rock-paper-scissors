@@ -11,11 +11,26 @@
     margin: 0 auto;
     margin-top: 70px;
     margin-bottom: 100px;
-
+    &__choice-container {
+        height: 290px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__buttons-container {
+        height: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     &__title {
         font-size: 30px;
         font-weight: 500;
         text-align: center;
+    }
+    &__winner-title {
+        font-size: 40px;
+        font-weight: 900;
     }
     &__restart-button {
         align-self: center;
@@ -31,8 +46,7 @@
         font-size: 30px;
         transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-        &:hover,
-        &:focus {
+        &:hover {
             color: $main-title-tone;
             box-shadow: 2px 2px 10px -2px rgba(66, 68, 90, 1);
         }
@@ -84,88 +98,14 @@
             box-shadow: 2px 2px 10px -2px rgba(66, 68, 90, 1);
         }
         &:hover > .game__buttons-icon {
-            fill: $bg-color;
+            fill: #000;
         }
     }
 }
 .game__buttons-icon {
     width: 130px;
     height: 130px;
-    fill: #000;
+    fill: $bg-color;
     transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
-}
-.rules {
-    position: absolute;
-    right: 6px;
-    display: inline-block;
-    margin-top: 30px;
-    border-radius: 50%;
-    z-index: 999;
-
-    &__button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        border-radius: 50%;
-
-        &:hover > .rules__icon,
-        &:focus > .rules__icon {
-            opacity: 0.7;
-        }
-        &:hover + .rules__description,
-        &:focus + .rules__description {
-            right: 10px;
-            padding: 20px;
-            opacity: 1;
-            width: 600px;
-            transform: scaleX(1) scaleY(1);
-            box-shadow: 4px 4px 20px 3px rgba(66, 68, 90, 1);
-        }
-    }
-    &__icon {
-        fill: $filler;
-        width: 54px;
-        height: 54px;
-        border-radius: 90%;
-        opacity: 1;
-        transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    &__description {
-        position: absolute;
-        right: 10px;
-        width: 600px;
-        opacity: 0;
-        background-color: $section-accent-tone;
-        border-radius: 20px;
-        transform: scaleX(0) scaleY(0);
-        transform-origin: top right;
-
-        transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    &__text {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-
-        &-icon {
-            fill: $bg-color;
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-        }
-        &--accented {
-            display: inline-block;
-            color: $bg-color;
-            font-weight: 700;
-        }
-    }
-    &__list {
-        margin: 20px 0;
-    }
-    &__item {
-        display: flex;
-        align-items: center;
-    }
 }

@@ -119,58 +119,64 @@
                 >
               </li>
             </ul>
-            <ul class="game__choice-list">
-              <li class="game__choice-item">
-                <svg class="game__choice-icon" id="player-choice">
-                  <use href="./img/icons.svg#icon-unknown-filled"></use>
-                </svg>
-              </li>
+            <div class="game__choice-container">
+              <ul class="game__choice-list">
+                <li class="game__choice-item">
+                  <svg class="game__choice-icon" id="player-choice">
+                    <use href="./img/icons.svg#icon-unknown-filled"></use>
+                  </svg>
+                </li>
 
-              <li class="game__choice-item">
-                <svg class="game__choice-icon" id="computer-choice">
-                  <use href="./img/icons.svg#icon-unknown-filled"></use>
-                </svg>
-              </li>
-            </ul>
-            <h2 class="game__winner-title hidden"></h2>
-            <ul class="game__buttons-list">
-              <li class="game__buttons-list-item">
-                <button
-                  class="game__buttons-list-button"
-                  id="rock"
-                  data-href="./img/icons.svg#icon-hand-rock-solid"
-                >
-                  <svg class="game__buttons-icon">
-                    <use href="./img/icons.svg#icon-hand-rock-solid"></use>
+                <li class="game__choice-item">
+                  <svg class="game__choice-icon" id="computer-choice">
+                    <use href="./img/icons.svg#icon-unknown-filled"></use>
                   </svg>
-                </button>
-              </li>
-              <li class="game__buttons-list-item">
-                <button
-                  class="game__buttons-list-button"
-                  id="paper"
-                  data-href="./img/icons.svg#icon-hand-paper-solid"
-                >
-                  <svg class="game__buttons-icon">
-                    <use href="./img/icons.svg#icon-hand-paper-solid"></use>
-                  </svg>
-                </button>
-              </li>
-              <li class="game__buttons-list-item">
-                <button
-                  class="game__buttons-list-button"
-                  id="scissors"
-                  data-href="./img/icons.svg#icon-hand-scissors-solid"
-                >
-                  <svg class="game__buttons-icon">
-                    <use href="./img/icons.svg#icon-hand-scissors-solid"></use>
-                  </svg>
-                </button>
-              </li>
-            </ul>
-            <button class="game__restart-button hidden">
-              restart the game
-            </button>
+                </li>
+              </ul>
+              <h2 class="game__winner-title hidden"></h2>
+            </div>
+            <div class="game__buttons-container">
+              <ul class="game__buttons-list">
+                <li class="game__buttons-list-item">
+                  <button
+                    class="game__buttons-list-button"
+                    id="rock"
+                    data-href="./img/icons.svg#icon-hand-rock-solid"
+                  >
+                    <svg class="game__buttons-icon">
+                      <use href="./img/icons.svg#icon-hand-rock-solid"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="game__buttons-list-item">
+                  <button
+                    class="game__buttons-list-button"
+                    id="paper"
+                    data-href="./img/icons.svg#icon-hand-paper-solid"
+                  >
+                    <svg class="game__buttons-icon">
+                      <use href="./img/icons.svg#icon-hand-paper-solid"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="game__buttons-list-item">
+                  <button
+                    class="game__buttons-list-button"
+                    id="scissors"
+                    data-href="./img/icons.svg#icon-hand-scissors-solid"
+                  >
+                    <svg class="game__buttons-icon">
+                      <use
+                        href="./img/icons.svg#icon-hand-scissors-solid"
+                      ></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+              <button class="game__restart-button hidden">
+                restart the game
+              </button>
+            </div>
           </div>
         </div>
       </main>

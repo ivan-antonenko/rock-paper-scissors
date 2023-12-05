@@ -2,6 +2,7 @@ const refs = {
   gameTitle: document.querySelector(".game__title"),
   playerScore: document.querySelector("#player-score"),
   computerScore: document.querySelector("#computer-score"),
+  choicesList: document.querySelector(".game__choice-list"),
   playerChoice: document.querySelector("#player-choice"),
   computerChoice: document.querySelector("#computer-choice"),
   gameButtons: document.querySelector(".game__buttons-list"),
@@ -144,6 +145,7 @@ function highlightWinner(roundResults) {
 }
 
 function endTheGame(refs, scores) {
+  refs.gameButtons.removeEventListener("click", onPlayButtonClick);
   refs.playButtons.forEach((element) => {
     element.setAttribute("disabled", "disabled");
     element.style.backgroundColor = "gray";
@@ -151,5 +153,55 @@ function endTheGame(refs, scores) {
 
   setTimeout(() => {
     refs.gameTitle.textContent = "Game Over!";
+    hideElement(refs.gameButtons);
+    showElement(refs.restartButton);
+    hideElement(refs.choicesList);
+    refs.restartButton.addEventListener("click", onRestartButtonClick);
+
+    if (scores.player > scores.computer) {
+      refs.winnerTitle.textContent = "Congrats! You won the game!";
+      refs.playerChoice.classList.remove("winner");
+    } else {
+      refs.winnerTitle.textContent = "You lose! Computer won the game!";
+      refs.computerChoice.classList.remove("winner");
+    }
+    showElement(refs.winnerTitle);
   }, 1500);
+}
+
+function hideElement(element) {
+  element.classList.add("hidden");
+}
+function showElement(element) {
+  element.classList.remove("hidden");
+}
+function onRestartButtonClick() {
+  refs.restartButton.removeEventListener("click", onRestartButtonClick);
+  refs.playButtons.forEach((element) => {
+    element.removeAttribute("disabled");
+    element.style.backgroundColor = "#739072";
+  });
+
+  scores.player = 0;
+  scores.computer = 0;
+  refs.playerChoice.firstElementChild.setAttribute(
+    "href",
+    "./img/icons.svg#icon-unknown-filled"
+  );
+  refs.computerChoice.firstElementChild.setAttribute(
+    "href",
+    "./img/icons.svg#icon-unknown-filled"
+  );
+
+  refs.gameTitle.textContent =
+    "The winner of the game is the player who reaches 5 points.";
+  refs.playerScore.textContent = "0";
+  refs.computerScore.textContent = "0";
+  hideElement(refs.winnerTitle);
+  refs.winnerTitle.textContent = "";
+  showElement(refs.choicesList);
+  hideElement(refs.restartButton);
+  showElement(refs.gameButtons);
+
+  refs.gameButtons.addEventListener("click", onPlayButtonClick);
 }
