@@ -2,6 +2,9 @@
     background-image: linear-gradient(192.53deg, $bg-tone 9.671%, $bg-tone 84.194%), url(../img/background-stripes.jpg);
     background-size: auto;
     background-position: -800px -350px;
+    @media screen and (min-width: 360px) {
+        background-position: -780px -350px;
+    }
     @media screen and (min-width: 375px) {
         background-position: -770px -315px;
     }

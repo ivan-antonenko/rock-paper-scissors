@@ -259,6 +259,11 @@ body {
   background-size: auto;
   background-position: -800px -350px;
 }
+@media screen and (min-width: 360px) {
+  .main {
+    background-position: -780px -350px;
+  }
+}
 @media screen and (min-width: 375px) {
   .main {
     background-position: -770px -315px;
