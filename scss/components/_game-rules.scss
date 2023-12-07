@@ -2,9 +2,12 @@
     position: absolute;
     right: 6px;
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 70px;
     border-radius: 50%;
     z-index: 999;
+    @media screen and (min-width: 768px) {
+        margin-top: 30px;
+    }
 
     &__button {
         display: flex;
@@ -20,37 +23,58 @@
         &:hover + .rules__description,
         &:focus + .rules__description {
             right: 10px;
-            padding: 20px;
+            padding: 15px;
             opacity: 1;
-            width: 600px;
+            width: 300px;
             transform: scaleX(1) scaleY(1);
             box-shadow: 4px 4px 20px 3px rgba(66, 68, 90, 1);
+            @media screen and (min-width: 375px) {
+                width: 340px;
+            }
+            @media screen and (min-width: 768px) {
+                padding: 20px;
+                width: 600px;
+            }
         }
     }
     &__icon {
         fill: $filler;
-        width: 54px;
-        height: 54px;
+        width: 40px;
+        height: 40px;
         border-radius: 90%;
         opacity: 1;
         transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
+        @media screen and (min-width: 1200px) {
+            width: 54px;
+            height: 54px;
+        }
     }
     &__description {
         position: absolute;
         right: 10px;
-        width: 600px;
+        width: 320px;
         opacity: 0;
         background-color: $section-accent-tone;
         border-radius: 20px;
         transform: scaleX(0) scaleY(0);
         transform-origin: top right;
-
         transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
+        @media screen and (min-width: 375px) {
+            width: 340px;
+        }
+        @media screen and (min-width: 768px) {
+            width: 600px;
+        }
     }
     &__text {
         font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
+        font-size: 14px;
+        line-height: 17px;
+        flex-shrink: 11;
+        @media screen and (min-width: 768px) {
+            font-size: 16px;
+            line-height: 20px;
+        }
 
         &-icon {
             fill: $bg-color;

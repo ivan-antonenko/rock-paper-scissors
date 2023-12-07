@@ -114,7 +114,7 @@ h6 {
 }
 
 .container {
-  min-width: 314px;
+  min-width: 320px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
@@ -134,20 +134,30 @@ body {
   padding: 25px 0;
 }
 .header__title {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 900;
   text-align: center;
   color: #3a4d39;
   letter-spacing: 3px;
+}
+@media screen and (min-width: 375px) {
+  .header__title {
+    font-size: 40px;
+  }
 }
 
 .rules {
   position: absolute;
   right: 6px;
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 70px;
   border-radius: 50%;
   z-index: 999;
+}
+@media screen and (min-width: 768px) {
+  .rules {
+    margin-top: 30px;
+  }
 }
 .rules__button {
   display: flex;
@@ -161,24 +171,41 @@ body {
 }
 .rules__button:hover + .rules__description, .rules__button:focus + .rules__description {
   right: 10px;
-  padding: 20px;
+  padding: 15px;
   opacity: 1;
-  width: 600px;
+  width: 300px;
   transform: scaleX(1) scaleY(1);
   box-shadow: 4px 4px 20px 3px rgb(66, 68, 90);
 }
+@media screen and (min-width: 375px) {
+  .rules__button:hover + .rules__description, .rules__button:focus + .rules__description {
+    width: 340px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .rules__button:hover + .rules__description, .rules__button:focus + .rules__description {
+    padding: 20px;
+    width: 600px;
+  }
+}
 .rules__icon {
   fill: #4f6f52;
-  width: 54px;
-  height: 54px;
+  width: 40px;
+  height: 40px;
   border-radius: 90%;
   opacity: 1;
   transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 1200px) {
+  .rules__icon {
+    width: 54px;
+    height: 54px;
+  }
+}
 .rules__description {
   position: absolute;
   right: 10px;
-  width: 600px;
+  width: 320px;
   opacity: 0;
   background-color: #739072;
   border-radius: 20px;
@@ -186,10 +213,27 @@ body {
   transform-origin: top right;
   transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 375px) {
+  .rules__description {
+    width: 340px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .rules__description {
+    width: 600px;
+  }
+}
 .rules__text {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 17px;
+  flex-shrink: 11;
+}
+@media screen and (min-width: 768px) {
+  .rules__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 .rules__text-icon {
   fill: #ece3ce;
@@ -213,42 +257,123 @@ body {
 .main {
   background-image: linear-gradient(192.53deg, rgba(237, 228, 207, 0.829) 9.671%, rgba(237, 228, 207, 0.829) 84.194%), url(../img/background-stripes.jpg);
   background-size: auto;
-  background-position: -195px -245px;
+  background-position: -800px -350px;
+}
+@media screen and (min-width: 375px) {
+  .main {
+    background-position: -770px -315px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main {
+    background-position: -575px -275px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main {
+    background-position: -315px -245px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .main {
+    background-position: -195px -250px;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .main {
+    background-position: -2px -250px;
+  }
 }
 
 .game {
   display: flex;
   flex-direction: column;
-  width: 1000px;
+  width: 290px;
   margin: 0 auto;
-  margin-top: 70px;
-  margin-bottom: 100px;
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+@media screen and (min-width: 375px) {
+  .game {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .game {
+    width: 600px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .game {
+    width: 1000px;
+    margin-top: 50px;
+  }
 }
 .game__choice-container {
-  height: 290px;
+  height: 145px;
   display: flex;
+  margin-top: 25px;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 375px) {
+  .game__choice-container {
+    height: 190px;
+    margin-top: 35px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .game__choice-container {
+    height: 290px;
+  }
 }
 .game__buttons-container {
-  height: 170px;
+  height: 95px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
+}
+@media screen and (min-width: 375px) {
+  .game__buttons-container {
+    height: 110px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .game__buttons-container {
+    margin-top: 5px;
+    height: 170px;
+  }
 }
 .game__title {
-  font-size: 30px;
+  height: 40px;
+  font-size: 18px;
   font-weight: 500;
   text-align: center;
 }
+@media screen and (min-width: 375px) {
+  .game__title {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .game__title {
+    font-size: 30px;
+  }
+}
 .game__winner-title {
-  font-size: 40px;
+  text-align: center;
+  font-size: 30px;
   font-weight: 900;
+}
+@media screen and (min-width: 375px) {
+  .game__winner-title {
+    font-size: 40px;
+  }
 }
 .game__restart-button {
   align-self: center;
   width: 400px;
-  margin-top: 60px;
   padding: 20px;
   border-radius: 20px;
   text-transform: capitalize;
@@ -256,8 +381,13 @@ body {
   background-color: #739072;
   color: #ece3ce;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 20px;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 375px) {
+  .game__restart-button {
+    font-size: 30px;
+  }
 }
 .game__restart-button:hover {
   color: #3a4d39;
@@ -266,12 +396,18 @@ body {
 
 .game__scores-list {
   display: flex;
-  justify-content: center;
-  -moz-column-gap: 300px;
-       column-gap: 300px;
-  margin-top: 60px;
+  justify-content: space-between;
+  margin-top: 45px;
   font-size: 20px;
   font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .game__scores-list {
+    margin-top: 40px;
+    justify-content: center;
+    -moz-column-gap: 300px;
+         column-gap: 300px;
+  }
 }
 .game__scores-list .game__scores-player-score {
   display: inline-block;
@@ -281,15 +417,38 @@ body {
 .game__choice-list {
   display: flex;
   justify-content: center;
-  -moz-column-gap: 150px;
-       column-gap: 150px;
-  margin-top: 35px;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+@media screen and (min-width: 375px) {
+  .game__choice-list {
+    -moz-column-gap: 45px;
+         column-gap: 45px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .game__choice-list {
+    -moz-column-gap: 150px;
+         column-gap: 150px;
+  }
 }
 
 .game__choice-icon {
-  width: 250px;
-  height: 250px;
+  width: 130px;
+  height: 130px;
   border-radius: 20px;
+}
+@media screen and (min-width: 375px) {
+  .game__choice-icon {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .game__choice-icon {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 .winner {
@@ -300,9 +459,20 @@ body {
 .game__buttons-list {
   display: flex;
   justify-content: center;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
-  margin-top: 40px;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+@media screen and (min-width: 375px) {
+  .game__buttons-list {
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .game__buttons-list {
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+  }
 }
 .game__buttons-list-button {
   background-color: #739072;
@@ -317,27 +487,51 @@ body {
 }
 
 .game__buttons-icon {
-  width: 130px;
-  height: 130px;
+  width: 85px;
+  height: 85px;
   fill: #ece3ce;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
+}
+@media screen and (min-width: 375px) {
+  .game__buttons-icon {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .game__buttons-icon {
+    width: 130px;
+    height: 130px;
+  }
 }
 
 .footer {
   padding: 25px 0;
   background-color: #739072;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 800;
   letter-spacing: 1px;
   color: #3a4d39;
 }
+@media screen and (min-width: 375px) {
+  .footer {
+    font-size: 20px;
+  }
+}
 .footer__wrap {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 15px;
   -moz-column-gap: 15px;
        column-gap: 15px;
+}
+@media screen and (min-width: 768px) {
+  .footer__wrap {
+    flex-direction: row;
+  }
 }
 .footer__link {
   display: flex;
